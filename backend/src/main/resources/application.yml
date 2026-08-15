@@ -1,0 +1,124 @@
+spring:
+  config:
+    import: optional:file:../.env[.properties],optional:file:.env[.properties]
+  application:
+    name: ai-live
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/ai_live}
+    username: ${DATABASE_USERNAME:ai_live}
+    password: ${DATABASE_PASSWORD:ai_live_local_only}
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      connect-timeout: ${REDIS_CONNECT_TIMEOUT:2s}
+      timeout: ${REDIS_TIMEOUT:2s}
+
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-mode: ${OPENAI_API_MODE:AUTO}
+      api-key: ${OPENAI_API_KEY:}
+      base-url: ${OPENAI_BASE_URL:}
+      model-name: ${OPENAI_MODEL:}
+      timeout: "PT${AI_TIMEOUT_SECONDS:15}S"
+
+app:
+  tts:
+    enabled: ${AI_TTS_ENABLED:true}
+    voice: ${AI_TTS_VOICE:Microsoft Huihui Desktop}
+    rate: ${AI_TTS_RATE:0}
+    volume: ${AI_TTS_VOLUME:85}
+    output-directory: ${AI_TTS_OUTPUT_DIRECTORY:.local/tts}
+    timeout: ${AI_TTS_TIMEOUT:PT30S}
+  data-retention:
+    reply-history: ${REPLY_HISTORY_RETENTION:P7D}
+    cleanup-interval: ${DATA_CLEANUP_INTERVAL:PT1H}
+  sse:
+    heartbeat-interval: ${SSE_HEARTBEAT_INTERVAL:PT15S}
+    overlay-stream:
+      character-interval: ${OVERLAY_STREAM_CHARACTER_INTERVAL:PT0.02S}
+      max-pending-replies: ${OVERLAY_STREAM_MAX_PENDING_REPLIES:4}
+  ai:
+    web-search:
+      enabled: ${AI_WEB_SEARCH_ENABLED:false}
+      endpoint: ${AI_WEB_SEARCH_ENDPOINT:http://localhost:8081/search}
+      max-results: ${AI_WEB_SEARCH_MAX_RESULTS:3}
+      timeout: ${AI_WEB_SEARCH_TIMEOUT:PT8S}
+      max-query-characters: ${AI_WEB_SEARCH_MAX_QUERY_CHARACTERS:200}
+      max-result-characters: ${AI_WEB_SEARCH_MAX_RESULT_CHARACTERS:3000}
+    memory:
+      max-messages: ${AI_MEMORY_MAX_MESSAGES:8}
+      max-active-memories: ${AI_MEMORY_MAX_ACTIVE_MEMORIES:1000}
+      ttl: ${AI_MEMORY_TTL:PT30M}
+      redis-key-prefix: ${AI_MEMORY_REDIS_KEY_PREFIX:ai-live:chat-memory}
+    room-context:
+      max-entries: ${AI_ROOM_CONTEXT_MAX_ENTRIES:12}
+      ttl: ${AI_ROOM_CONTEXT_TTL:PT30M}
+      redis-key-prefix: ${AI_ROOM_CONTEXT_REDIS_KEY_PREFIX:ai-live:room-context}
+    reply-policy:
+      max-reply-characters: ${AI_MAX_REPLY_CHARACTERS:160}
+      user-cooldown: ${AI_USER_COOLDOWN:PT3S}
+      max-model-calls-per-window: ${AI_MAX_MODEL_CALLS_PER_WINDOW:60}
+      model-call-rate-window: ${AI_MODEL_CALL_RATE_WINDOW:PT1M}
+      max-pending-per-room: ${AI_MAX_PENDING_PER_ROOM:4}
+      max-concurrent-per-room: ${AI_MAX_CONCURRENT_PER_ROOM:2}
+      max-scheduled-rooms: ${AI_MAX_SCHEDULED_ROOMS:100}
+      max-queue-wait: ${AI_MAX_QUEUE_WAIT:PT20S}
+      worker-threads: ${AI_REPLY_WORKER_THREADS:4}
+      redis-key-prefix: ${AI_REPLY_POLICY_REDIS_KEY_PREFIX:ai-live:reply-policy}
+  live-platform:
+    welcome:
+      enabled: ${VIEWER_WELCOME_ENABLED:true}
+      aggregation-window: ${VIEWER_WELCOME_AGGREGATION_WINDOW:PT6S}
+      flush-interval: ${VIEWER_WELCOME_FLUSH_INTERVAL:PT1S}
+      max-delay: ${VIEWER_WELCOME_MAX_DELAY:PT15S}
+      deduplication-ttl: ${VIEWER_WELCOME_DEDUPLICATION_TTL:PT12H}
+      display-duration: ${VIEWER_WELCOME_DISPLAY_DURATION:PT5S}
+      max-named-viewers: ${VIEWER_WELCOME_MAX_NAMED_VIEWERS:3}
+      max-pending-viewers: ${VIEWER_WELCOME_MAX_PENDING_VIEWERS:20}
+      redis-key-prefix: ${VIEWER_WELCOME_REDIS_KEY_PREFIX:ai-live:viewer-welcome}
+    audience:
+      active-window: ${LIVE_AUDIENCE_ACTIVE_WINDOW:PT5M}
+      session-ttl: ${LIVE_AUDIENCE_SESSION_TTL:PT12H}
+      redis-key-prefix: ${LIVE_AUDIENCE_REDIS_KEY_PREFIX:ai-live:audience}
+    bilibili:
+      open-live-enabled: ${BILIBILI_OPEN_LIVE_ENABLED:false}
+      auto-connect: ${BILIBILI_AUTO_CONNECT:true}
+      api-base-url: ${BILIBILI_API_BASE_URL:https://live-open.biliapi.com}
+      access-key-id: ${BILIBILI_ACCESS_KEY_ID:}
+      access-key-secret: ${BILIBILI_ACCESS_KEY_SECRET:}
+      app-id: ${BILIBILI_APP_ID:0}
+      identity-code: ${BILIBILI_IDENTITY_CODE:}
+      request-timeout: ${BILIBILI_REQUEST_TIMEOUT:PT10S}
+      heartbeat-interval: ${BILIBILI_HEARTBEAT_INTERVAL:PT20S}
+      reconnect-delay: ${BILIBILI_RECONNECT_DELAY:PT5S}
+      max-session-restart-attempts: ${BILIBILI_MAX_SESSION_RESTART_ATTEMPTS:6}
+      max-heartbeat-failures: ${BILIBILI_MAX_HEARTBEAT_FAILURES:3}
+      event-worker-threads: ${BILIBILI_EVENT_WORKER_THREADS:4}
+      max-pending-events: ${BILIBILI_MAX_PENDING_EVENTS:100}
+  live-output:
+    danmaku:
+      max-characters: ${AI_DANMAKU_MAX_CHARACTERS:40}
+      minimum-interval: ${AI_DANMAKU_MINIMUM_INTERVAL:PT10S}
+      echo-retention: ${AI_DANMAKU_ECHO_RETENTION:PT2M}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "model": "paper-messenger",
+  "defaultState": "idle",
+  "states": {
+    "idle": {
+      "expression": "normal",
+      "motionGroup": "Idle",
+      "loop": true
+    },
+    "received": {
+      "expression": "happy",
+      "motionGroup": "Received",
+      "loop": false,
+      "fallbackState": "thinking"
+    },
+    "welcoming": {
+      "expression": "happy",
+      "motionGroup": "Received",
+      "loop": true,
+      "fallbackState": "idle"
+    },
+    "thinking": {
+      "expression": "focused",
+      "motionGroup": "Thinking",
+      "loop": true
+    },
+    "speaking": {
+      "expression": "happy",
+      "motionGroup": "Speaking",
+      "loop": true,
+      "mouthDriver": "stream"
+    },
+    "error": {
+      "expression": "confused",
+      "motionGroup": "Error",
+      "loop": false,
+      "fallbackState": "idle"
+    },
+    "reconnecting": {
+      "expression": "offline",
+      "motionGroup": "Reconnecting",
+      "loop": true
+    }
+  },
+  "parameters": {
+    "mouthOpen": "ParamMouthOpenY",
+    "mouthForm": "ParamMouthForm",
+    "breath": "ParamBreath",
+    "eyeLeftOpen": "ParamEyeLOpen",
+    "eyeRightOpen": "ParamEyeROpen",
+    "angleZ": "ParamAngleZ"
+  },
+  "transitionMs": 350,
+  "reducedMotion": {
+    "motionEnabled": false,
+    "expressionEnabled": true,
+    "mouthEnabled": false
+  }
+}

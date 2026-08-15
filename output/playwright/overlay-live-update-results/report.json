@@ -1,0 +1,224 @@
+{
+  "token": "6b1236ff",
+  "runtimeBefore": {
+    "modelConfigured": true,
+    "modelName": "grok-4.5",
+    "configuredApiMode": "AUTO",
+    "activeApiMode": "RESPONSES",
+    "lastModelCallAt": "2026-08-11T16:07:03.875804800Z",
+    "lastModelDurationMs": 6184,
+    "lastModelError": null,
+    "consecutiveModelFailures": 0,
+    "circuitState": "CLOSED",
+    "circuitOpenUntil": null,
+    "bilibiliOpenLiveEnabled": true,
+    "paused": false,
+    "outputMode": "OVERLAY_ONLY",
+    "activeRooms": 0,
+    "pendingReplies": 0,
+    "maxPendingPerRoom": 4,
+    "maxConcurrentPerRoom": 2,
+    "maxModelCallsPerWindow": 60,
+    "overlaySubscribers": 1,
+    "controlSubscribers": 1,
+    "recentlyActiveViewers": 5,
+    "observedSessionViewers": 6,
+    "audienceEstimated": true
+  },
+  "responses": [
+    {
+      "url": "http://127.0.0.1:5173/api/overlay/recent",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/overlay/recent",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/overlay/recent",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/overlay/recent",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/overlay/recent",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/overlay/recent",
+      "status": 200
+    }
+  ],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "log",
+      "text": "[CSM][I]Live2D Cubism Core version: 05.01.0000 (83951616)\n"
+    },
+    {
+      "type": "log",
+      "text": "[CSM][I]CubismFramework.startUp() is complete.\n"
+    },
+    {
+      "type": "log",
+      "text": "[CSM][I]CubismFramework.initialize() is complete.\n"
+    },
+    {
+      "type": "log",
+      "text": "Live2D Cubism SDK Core Version 5.1.0"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x294402652400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x294402652400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x294402652400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x294402652400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "pageErrors": [],
+  "snapshots": [
+    {
+      "phase": "before",
+      "rootClass": "paper-room-overlay mode-idle active",
+      "heading": [
+        "@实时刷新测试de37fb94"
+      ],
+      "source": [
+        "你刚才说：“请回复验证码de37fb94，用来确认页面会自动更新。”"
+      ],
+      "message": [
+        "收到，验证码是 de37fb94，页面自动刷新测试通过啦。"
+      ],
+      "status": [
+        "和大家一起聊天中"
+      ]
+    },
+    {
+      "phase": "during",
+      "rootClass": "paper-room-overlay mode-idle active",
+      "heading": [
+        "@实时刷新测试de37fb94"
+      ],
+      "source": [
+        "你刚才说：“请回复验证码de37fb94，用来确认页面会自动更新。”"
+      ],
+      "message": [
+        "收到，验证码是 de37fb94，页面自动刷新测试通过啦。"
+      ],
+      "status": [
+        "和大家一起聊天中"
+      ]
+    },
+    {
+      "phase": "after",
+      "rootClass": "paper-room-overlay mode-idle active",
+      "heading": [
+        "@实时刷新测试6b1236ff"
+      ],
+      "source": [
+        "你刚才说：“请回复验证码6b1236ff，用来确认页面会自动更新。”"
+      ],
+      "message": [
+        "收到～验证码是 6b1236ff，页面应该会自动更新啦。"
+      ],
+      "status": [
+        "和大家一起聊天中"
+      ]
+    }
+  ],
+  "runtimeAfterSubscribe": {
+    "modelConfigured": true,
+    "modelName": "grok-4.5",
+    "configuredApiMode": "AUTO",
+    "activeApiMode": "RESPONSES",
+    "lastModelCallAt": "2026-08-11T16:07:03.875804800Z",
+    "lastModelDurationMs": 6184,
+    "lastModelError": null,
+    "consecutiveModelFailures": 0,
+    "circuitState": "CLOSED",
+    "circuitOpenUntil": null,
+    "bilibiliOpenLiveEnabled": true,
+    "paused": false,
+    "outputMode": "OVERLAY_ONLY",
+    "activeRooms": 0,
+    "pendingReplies": 0,
+    "maxPendingPerRoom": 4,
+    "maxConcurrentPerRoom": 2,
+    "maxModelCallsPerWindow": 60,
+    "overlaySubscribers": 1,
+    "controlSubscribers": 1,
+    "recentlyActiveViewers": 5,
+    "observedSessionViewers": 6,
+    "audienceEstimated": true
+  },
+  "publishResult": {
+    "id": "a193bb64-e92d-4e78-abb0-0c8255f9ce8d",
+    "platform": "MOCK",
+    "roomId": "overlay-live-update-test",
+    "senderId": "live-update-6b1236ff",
+    "senderName": "实时刷新测试6b1236ff",
+    "messageId": "ba9ddaad-9e70-4723-b577-72f0dc6f8788",
+    "sourceText": "请回复验证码6b1236ff，用来确认页面会自动更新。",
+    "candidateText": "收到～验证码是 6b1236ff，页面应该会自动更新啦。",
+    "danmakuText": "验证码：6b1236ff",
+    "danmakuStatus": "SKIPPED",
+    "danmakuPlatformMessageId": null,
+    "danmakuDecisionReason": "当前为仅 Overlay 模式",
+    "status": "AUTO_PUBLISHED",
+    "decisionReason": null,
+    "promptProfileVersion": 0,
+    "occurredAt": "2026-08-11T16:08:38.826092400Z",
+    "createdAt": "2026-08-11T16:08:46.447916400Z"
+  },
+  "runtimeAfter": {
+    "modelConfigured": true,
+    "modelName": "grok-4.5",
+    "configuredApiMode": "AUTO",
+    "activeApiMode": "RESPONSES",
+    "lastModelCallAt": "2026-08-11T16:08:46.431262800Z",
+    "lastModelDurationMs": 7472,
+    "lastModelError": null,
+    "consecutiveModelFailures": 0,
+    "circuitState": "CLOSED",
+    "circuitOpenUntil": null,
+    "bilibiliOpenLiveEnabled": true,
+    "paused": false,
+    "outputMode": "OVERLAY_ONLY",
+    "activeRooms": 0,
+    "pendingReplies": 0,
+    "maxPendingPerRoom": 4,
+    "maxConcurrentPerRoom": 2,
+    "maxModelCallsPerWindow": 60,
+    "overlaySubscribers": 1,
+    "controlSubscribers": 1,
+    "recentlyActiveViewers": 5,
+    "observedSessionViewers": 6,
+    "audienceEstimated": true
+  }
+}

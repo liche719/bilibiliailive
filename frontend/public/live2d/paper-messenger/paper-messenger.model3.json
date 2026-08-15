@@ -1,0 +1,49 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "paper-messenger.moc3",
+    "Textures": [
+      "paper-messenger.2048/texture_00.png"
+    ],
+    "Motions": {
+      "Idle": [
+        { "File": "motions/idle.motion3.json", "FadeInTime": 0.8, "FadeOutTime": 0.8 }
+      ],
+      "Received": [
+        { "File": "motions/received.motion3.json", "FadeInTime": 0.12, "FadeOutTime": 0.35 }
+      ],
+      "Thinking": [
+        { "File": "motions/thinking.motion3.json", "FadeInTime": 0.5, "FadeOutTime": 0.5 }
+      ],
+      "Speaking": [
+        { "File": "motions/speaking.motion3.json", "FadeInTime": 0.15, "FadeOutTime": 0.25 }
+      ],
+      "Error": [
+        { "File": "motions/error.motion3.json", "FadeInTime": 0.2, "FadeOutTime": 0.5 }
+      ],
+      "Reconnecting": [
+        { "File": "motions/reconnecting.motion3.json", "FadeInTime": 0.6, "FadeOutTime": 0.6 }
+      ]
+    },
+    "Expressions": [
+      { "Name": "normal", "File": "expressions/normal.exp3.json" },
+      { "Name": "happy", "File": "expressions/happy.exp3.json" },
+      { "Name": "focused", "File": "expressions/focused.exp3.json" },
+      { "Name": "confused", "File": "expressions/confused.exp3.json" },
+      { "Name": "offline", "File": "expressions/offline.exp3.json" }
+    ],
+    "DisplayInfo": "paper-messenger.cdi3.json"
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": ["ParamEyeLOpen", "ParamEyeROpen"]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": ["ParamMouthOpenY"]
+    }
+  ]
+}

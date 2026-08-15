@@ -1,0 +1,10 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "paper-messenger-v5.moc3",
+		"Textures": [
+			"paper-messenger-v5.2048/texture_00.png"
+		],
+		"DisplayInfo": "paper-messenger-v5.cdi3.json"
+	}
+}

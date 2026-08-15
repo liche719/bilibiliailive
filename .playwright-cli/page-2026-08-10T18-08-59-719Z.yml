@@ -1,0 +1,15 @@
+- generic [ref=f1e2]:
+  - main:
+    - generic:
+      - region "AI 主播状态":
+        - status:
+          - paragraph: 正在进入直播间
+      - region "AI 直播回复":
+        - generic "历史回复"
+        - article:
+          - generic:
+            - generic: TO
+            - strong: "@正在看直播的你"
+            - generic: AI
+          - paragraph: 正在整理桌面，马上回来。
+          - generic: 纸信使回复

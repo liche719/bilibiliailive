@@ -1,0 +1,14 @@
+{
+  "Type": "Live2D Expression Motion",
+  "FadeInTime": 0.65,
+  "FadeOutTime": 0.65,
+  "Parameters": [
+    { "Id": "ParamEyeLOpen", "Value": 0.25, "Blend": "Overwrite" },
+    { "Id": "ParamEyeROpen", "Value": 0.25, "Blend": "Overwrite" },
+    { "Id": "ParamEyeBallY", "Value": -0.35, "Blend": "Overwrite" },
+    { "Id": "ParamBrowLY", "Value": -0.4, "Blend": "Overwrite" },
+    { "Id": "ParamBrowRY", "Value": -0.4, "Blend": "Overwrite" },
+    { "Id": "ParamMouthForm", "Value": -0.45, "Blend": "Overwrite" },
+    { "Id": "ParamMouthOpenY", "Value": 0, "Blend": "Overwrite" }
+  ]
+}
