@@ -5,7 +5,7 @@ backend/target/
 frontend/node_modules/
 frontend/dist/
 searxng/limiter.toml
-
+design-concepts/
 .agents/
 .playwright-cli/
 
